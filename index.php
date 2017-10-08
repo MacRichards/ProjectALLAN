@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>2017 OA Hackathon</title>
+<title>Project ALLAN - 2017 Hackathon</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="images/favicon.ico">
@@ -47,14 +47,14 @@ body, html {height: 100%}
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #1a1a1a;
+    background-color: #36454F;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 50px; }
     .navbar-fixed-top .container .sidenav a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 15px;
       color: #999;
       display: block;
       transition: 0.3s;
@@ -80,11 +80,14 @@ body, html {height: 100%}
 	  margin-top: 13px;
 	  margin-bottom: 13px;
 	  color: white;
-	  background-color: #1a1a1a;
+	  background-color: transparent;
 	  background-image: none;
-	  border: 0px solid #1a1a1a;
+	  border: 0px solid transparent;
 	  border-radius: 0;
 	}
+  .navbar-toggle:hover {
+    border: 0px solid transparent;
+  }
 
   #siginInButt {
     background-color:white;
@@ -112,7 +115,7 @@ body, html {height: 100%}
   padding-bottom: 50px;
   text-align: center;
   font-size: 11px;
-  background: #e03a3c;
+  background: #e31837;
   color: #f8f8f2;
   text-transform: uppercase;
 }
@@ -145,11 +148,10 @@ label::before {
 
 </style>
 <body onbeforeunload="signInForm.signInButt.name='signOut';signInOut()" onload="hideShow('hide')">
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" onclick="openNav()" aria-expanded="false" aria-controls="navbar"><i class="fa fa-comments"></i> Chat</button>
+      <button type="button" class="navbar-toggle" onclick="openNav()" aria-expanded="false" aria-controls="navbar" style="float:left;"><i class="fa fa-comments"></i> Tools</button>
       <a class="navbar-brand" href="/"></a>
     </div>
     <div id="navbar" class="sidenav">
@@ -166,15 +168,20 @@ label::before {
             <input id="send" type="submit" value="Login">
           </form>
   		  </div>
-		  <h2>Pinned Content</h2>
+		  <h2>Shared Files</h2>
       <?php
 
       $path    = 'upload/';
       $files = scandir($path);
       $files = array_diff(scandir($path), array('.', '..'));
       foreach ($files as $value) {
-          echo "<a href=\"upload/$value\" target=\"_blank\">$value</a><br />\n";
+          echo "<a href=\"upload/$value\" target=\"_blank\">$value</a>\n";
       }
+
+
+      $my_file = 'url.txt';
+      $handle = fopen($my_file, 'r');
+      $data = fread($handle,filesize($my_file));
       ?>
 
       <hr>
@@ -210,7 +217,9 @@ label::before {
     </script>
   </div>
 </nav>
-
+<div class="row" style="background-color:#e31837;">
+<img style="max-width:400px; width:100%; height:auto; display:block; margin:0 auto;" src="images/brand.png">
+</div>
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
@@ -222,8 +231,7 @@ label::before {
     <div class="w3-col">
 
       <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16" style="margin-bottom:0px !important">Project ALLAN</h2> Awesome Lodge LAN Accessible Network<br><hr><br>
-		<iframe src="site/website/index.html" scrolling="auto" class="wrapper" width="100%" height="700" frameborder="0">
+		<iframe src="<?php echo $data; ?>" scrolling="auto" class="wrapper" width="100%" height="700" frameborder="0">
 	  This option will not work correctly. Unfortunately, your browser does not support inline frames.</iframe>
         <div class="w3-container">
         </div>
