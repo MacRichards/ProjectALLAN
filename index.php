@@ -162,6 +162,7 @@ label::before {
         <input type="checkbox" class="show-all" id="show-all">
   		  <label class="w3-btn" for="show-all"></label>
         <div class="all-items">
+          <?php echo $_COOKIE["adminLogin"]; ?>
           <form action="login.php" id="login">
             <input id="usr" name="usr" type="text" placeholder="Username">
             <input id="pwd" name="pwd" type="password" placeholder="Password">
