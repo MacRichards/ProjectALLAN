@@ -1,0 +1,1405 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Always show the vertical scroll bar so content doesn't shift right and left between long and short pages - Large Devices Only*/
+
+@media only screen and (min-device-width: 900px) {
+    html {
+        overflow-y: scroll;
+    }
+}
+
+
+/* ------------------------------------------------------
+   Main Page Divisions
+	 ------------------------------------------------------*/
+
+body {
+    background-color: #ffffff;
+    font-size: 85%;
+    line-height: 160%;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    color: #252525;
+}
+
+
+/* -------------------- Page Header  --------------------*/
+
+.skip {
+    /* This is for accessibility links. */
+    display: none;
+}
+
+header#page-header {
+    max-width: 990px;
+    width: 97%;
+    height: 110px;
+    padding: 10px 0 10px 0;
+    margin: 0 auto 0 auto;
+}
+
+#mobile-logo {
+    float: left;
+    display: none;
+}
+
+#site-name {
+    font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+    font-size: 30px;
+    line-height: 100%;
+    margin-top: 0;
+    white-space: nowrap;
+    padding-left: 3px;
+}
+
+#site-name a,
+#site-name a:visited {
+    text-decoration: none;
+    color: #CE1126;
+}
+
+#site-name a:hover {
+    color: #CE1126;
+}
+
+#fleurdelis {
+    float: left;
+    width: 11.8181818%;
+}
+
+#brand {
+    width: 47.27272727%;
+}
+
+#charter-box {
+    width: 33%;
+    float: right;
+    text-align: right;
+    color: #005A9C;
+    padding-right: 5px;
+}
+
+
+/* -------------------- Content Wrapper --------------------*/
+
+#wrapper {
+    max-width: 990px;
+    width: 97%;
+    padding: 15px 0 10px 0;
+    margin: 0 auto 0 auto;
+}
+
+.content-third {
+    width: 32.323%;
+    margin-left: 1.515%;
+    float: left;
+    overflow-x: hidden;
+}
+
+.content-third:first-child {
+    margin-left: 0%;
+}
+
+#page-content {
+    /* Need a margin from the two floating elements */
+    width: 100%;
+    padding: 15px 0 15px;
+    overflow-y: auto;
+}
+
+#content-wide {
+    width: 66%;
+    margin: 0 1.5% 0 1.5%;
+    float: left;
+    overflow-x: hidden;
+}
+
+aside {
+    width: 28%;
+    margin: 0 1.5% 0 1.4%;
+    float: right;
+    overflow-x: hidden;
+}
+
+#content-full {
+    width: 96.5%;
+    margin: 0 1.75% 0 1.75%;
+    overflow-x: hidden;
+}
+
+
+/* -------------------- Page Footer --------------------*/
+
+footer {
+    width: 96.5%;
+    padding: 10px 1.75% 10px 1.75%;
+    margin-top: 15px;
+    background-color: #005A9C;
+    color: #efefef;
+    clear: both;
+    font-size: 85%;
+    overflow-x: hidden;
+}
+
+#credit {
+    width: 99%;
+    text-align: right;
+    color: #aaa;
+    font-size: 80%
+}
+
+footer div div div li {
+    list-style-type: none;
+    line-height: 125%;
+    width: 66%;
+}
+
+
+/* -------------------- Search Box --------------------*/
+
+form.search-form {
+    margin-bottom: 25px;
+    background-color: #005A9C;
+    color: white;
+    padding: 5px;
+    border: 1px solid #005A9C;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+/* -------------------- Front Page Only --------------------*/
+
+#front-pic {
+    float: center;
+    clear: left;
+}
+
+#front-image-bottom {
+    max-width: 100%;
+    display: none;
+}
+
+#front-first {
+    width: 100%;
+    float: left;
+}
+
+#front-first img {
+    max-width: 100%/* in case someone puts an image here. */
+}
+
+#front-bottom {
+    /*The bottom must clear the top content. */
+    width: 100%;
+    clear: both;
+    padding-top: 15px;
+    overflow-y: auto;
+}
+
+/* ------------------------ Slider ------------------------*/
+
+#sliderFrame,
+#sliderFrame div {
+    box-sizing: content-box;
+}
+
+#sliderFrame {
+    background-color: white;
+}
+
+#slider,
+#slider .sliderInner {
+    width: 100%;
+    height: 400px;
+    /* Must be the same size as the slider images */
+    margin: 0 auto;
+    /*center-aligned*/
+    border-radius: 0px;
+}
+
+#slider {
+    background-color: white;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    /*box-shadow: 0px 1px 5px #999999;*/
+}
+
+
+/* the link style (if an image is wrapped by a link) */
+
+#slider a.imgLink,
+#slider .video {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#slider .video {
+    background: transparent url(video.png) no-repeat 50% 50%;
+}
+
+
+/* Caption styles */
+
+#slider .mc-caption {}
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+
+#slider .navBulletsWrapper {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    font-size: 0;
+    box-sizing: content-box;
+    position: absolute;
+    margin: auto;
+    width: 80px;
+    top: 350px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    z-index: 3;
+}
+
+
+/* each bullet */
+
+#slider .navBulletsWrapper div {
+    width: 7px;
+    height: 7px;
+    border: 3px solid #999;
+    background: none;
+    font-size: 0;
+    text-align: center;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 4px;
+    /* set distance between each bullet*/
+    border-radius: 50%;
+}
+
+#slider .navBulletsWrapper .active {
+    border-color: #000;
+}
+
+
+/* --------- Others ------- */
+
+#slider img,
+#slider>b,
+#slider a>b {
+    position: absolute;
+    border: none;
+    display: none;
+}
+
+#slider .sliderInner {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#slider>a,
+#slider video,
+#slider audio {
+    display: none;
+}
+
+#slider div {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* ------------------------------------------------------
+   Typography
+	 ------------------------------------------------------*/
+
+
+/* -------------------- Headings --------------------*/
+
+h1,
+h2 {
+    font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+    font-size: 190%;
+    line-height: 130%;
+    margin: 0 0 10px 0;
+    color: #005A9C;
+}
+
+h3 {
+    font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+    font-size: 170%;
+    line-height: 130%;
+    margin: 0 0 10px 0;
+    color: #005A9C;
+}
+
+h4 {
+    font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+    font-size: 150%;
+    line-height: 130%;
+    margin: 0 0 10px 0;
+    color: #005A9C;
+}
+
+h5 {
+    font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+    font-size: 130%;
+    line-height: 130%;
+    margin: 0 0 7px 0;
+    color: #CE1126;
+}
+
+h6 {
+    font-family: marcellusregular, Marcellus, "Trajan Pro", serif;
+    font-size: 110%;
+    line-height: 130%;
+    margin: 0 0 5px 0;
+    color: #CE1126;
+}
+
+
+/* ------------------ Required by WordPress ----------------*/
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+div.aligncenter {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.bypostauthor {
+    font-weight: bold;
+}
+
+.wp-caption.alignright,
+figure.alignright {
+    margin-left: 10px;
+    max-width: 50%;
+}
+
+.wp-caption.alignleft,
+figure.alignleft {
+    margin-right: 10px;
+    max-width: 50%;
+}
+
+div.aligncenter img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wp-caption img,
+figure img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+p.wp-caption-text,
+figure {
+    width: 98%;
+    padding: 0 1% 10px 1%;
+    text-align: center;
+    margin: 0;
+    font-size: 80%;
+    font-weight: bold;
+    color: black;
+}
+
+.gallery-caption {
+    color: #005A9C;
+}
+
+.sticky {
+    background-color: #FCFCFC;
+}
+
+
+/* -------------------- Content --------------------*/
+
+p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 130%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+/* -------------------- Tables --------------------*/
+
+table {
+    margin: 10px 0 17px 0;
+    border-collapse: collapse;
+}
+
+table,
+td,
+th {
+    border: 1px solid #005A9C;
+}
+
+th {
+    color: #fff;
+    background-color: #005A9C;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+
+/* -------------------- Blockquotes --------------------*/
+
+blockquote {
+    background-color: #F1EADA;
+    color: #005A9C;
+    margin: 15px 35px 17px 35px;
+    border-left: 4px solid #CE1126;
+    padding: 10px;
+    font-size: 150%;
+    line-height: 120%;
+    font-family: Georgia, "Times New Roman", Times, "New York", serif;
+    font-style: italic;
+}
+
+
+/* -------------------- Lists --------------------*/
+
+#wrapper ol {
+    margin-left: 30px;
+    line-height: 130%;
+    margin-bottom: 10px;
+    list-style-type: decimal;
+}
+
+#wrapper ul {
+    margin-left: 30px;
+    line-height: 130%;
+    margin-bottom: 10px;
+    list-style-type: square;
+}
+
+#wrapper li ul {
+    list-style-type: circle;
+}
+
+#wrapper li li ul {
+    list-style-type: disc;
+}
+
+#wrapper li ol {
+    list-style-type: lower-alpha;
+}
+
+#wrapper li li ol {
+    list-style-type: lower-roman;
+}
+
+
+/* -------------------- Less Common Markup --------------------*/
+
+.underline {
+    text-decoration: underline;
+}
+
+#wrapper dl {
+    margin: 10px 0 17px 0;
+}
+
+#wrapper dt {
+    font-weight: bold;
+}
+
+#wrapper dd {
+    margin: 5px 0 17px 15px;
+    line-height: 140%;
+    margin-bottom: 15px;
+}
+
+#wrapper strong,
+#wrapper b {
+    font-weight: bold;
+}
+
+#wrapper em {
+    font-style: italic;
+}
+
+#wrapper sup {
+    font-size: 75%;
+    vertical-align: super;
+}
+
+#wrapper sub {
+    font-size: 75%;
+    vertical-align: sub;
+}
+
+#wrapper cite,
+#wrapper i {
+    font-style: italic;
+}
+
+#wrapper abbr {
+    border-bottom: 1px dotted #CE1126;
+}
+
+#wrapper del {
+    text-decoration: line-through;
+}
+
+#wrapper ins {
+    color: #CE1126;
+    text-decoration: underline;
+}
+
+#wrapper pre {
+    font-family: monospace;
+    font-size: 100%;
+    margin: 10px 0 10px 0;
+    line-height: 100%;
+}
+
+#wrapper code {
+    background-color: #F1EADA;
+    font-family: monospace;
+    font-size: 100%;
+    white-space: pre;
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border-left: 4px solid #CE1126;
+    line-height: 100%;
+}
+
+#wrapper var {
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+}
+
+hr {
+    height: 1px;
+    color: #005A9C;
+    background-color: #005A9C;
+    margin: 15px 0 15px 0;
+    border: 0;
+}
+
+
+/* ------------------------------------------------------
+   Images
+	 ------------------------------------------------------*/
+
+#footer-prepared {
+    float: right;
+    max-width: 30%;
+}
+
+img.alignright {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+img.alignleft {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ------------------------------------------------------
+   Links
+	 ------------------------------------------------------*/
+
+#wrapper a,
+#wrapper a:visited {
+    color: #005A9C;
+    text-decoration: underline;
+}
+
+#wrapper a:hover,
+#wrapper a:active {
+    color: #CE1126;
+}
+
+#wrapper footer a,
+#wrapper footer a:visited {
+    text-decoration: none;
+    color: #efefef;
+}
+
+#wrapper footer a:hover,
+#wrapper footer a:active {
+    text-decoration: underline;
+    color: #efefef;
+}
+
+#wrapper div#credit a,
+#wrapper div#credit a:visited {
+    color: #aaa;
+    text-decoration: none;
+}
+
+#wrapper div#credit a:hover,
+#wrapper div#credit a:active {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------
+   Media Queries
+	 ------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+    header#page-header {
+        height: 95px;
+        padding: 10px 0 10px 0;
+        margin: 0 auto 0 auto;
+    }
+    #fleurdelis {
+        float: left;
+        width: 10%
+    }
+    #brand {
+        width: 40%;
+    }
+    #charter-box {
+        font-size: 90%;
+        width: 45%
+    }
+    #wrapper {
+        width: 100%;
+    }
+    #front-pic,
+    .content-third:first-child {
+        width: 47.375%;
+        float: left;
+        margin: 0 1.75% 0 1.75%;
+    }
+    #front-first,
+    .content-third:nth-child(2) {
+        width: 47.375%;
+        float: left;
+        margin: 0 1.75% 0 0;
+    }
+    .content-third:last-child {
+        width: 96.5%;
+        float: none;
+        clear: both;
+    }
+    #front-image-bottom {
+        display: block;
+    }
+}
+
+
+/* smaller than ipad in portrait */
+
+@media only screen and (max-width: 767px) {
+    #site-name {
+        line-height: 100px;
+        vertical-align: middle;
+        display: block;
+    }
+    #site-name a,
+    #site-name a:visited {
+        text-decoration: none;
+        color: #005A9C;
+    }
+    #site-name a:hover {
+        color: #005A9C;
+    }
+    #fleurdelis,
+    #brand,
+    #logo {
+        display: none;
+    }
+    #mobile-logo {
+        display: block;
+        float: left;
+    }
+    #wrapper {
+        padding: 0 0 10px 0;
+        font-size: 130%;
+    }
+    #front-image-bottom {
+        display: none;
+    }
+    #charter-box {
+        display: none;
+    }
+    header#page-header {
+        height: 55px;
+    }
+    #site-name {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    #front-pic {
+        width: 100%;
+        margin: 0;
+        float: none;
+        clear: both;
+    }
+    #front-image {
+        max-width: 100%;
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+    #content-full,
+    aside,
+    #content-wide,
+    #front-first,
+    .content-third:last-child,
+    .content-third:first-child,
+    .content-third:nth-child(2) {
+        width: 90%;
+        padding: 0;
+        float: none;
+        clear: both;
+        margin: 0 auto 0 auto;
+    }
+    #content-wide,
+    #front-first,
+    .content-third:first-child,
+    .content-third:nth-child(2) {
+        border-bottom: 1px dotted #005A9C;
+        padding-bottom: 4px;
+        margin-bottom: 15px;
+    }
+    #front-bottom {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    h1,
+    h2 {
+        font-size: 160%;
+    }
+    footer,
+    #credit {
+        font-size: 70%;
+    }
+    footer {
+        width: 100%;
+        padding: 10px 0 10px 0;
+        margin-top: 15px;
+        background-color: #005A9C;
+        color: #efefef;
+        clear: both;
+        text-align: center;
+    }
+    #footer-prepared {
+        float: none;
+        margin: 0 auto 10px auto;
+        width: 80%;
+        max-width: 80%;
+    }
+    footer div div div li {
+        list-style-type: none;
+        line-height: 125%;
+        width: 100%;
+        clear: both;
+    }
+}
+
+
+/* Flexnav Base Styles */
+
+.flexnav {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    transition: none;
+    -webkit-transform-style: preserve-3d;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 0;
+}
+
+.flexnav.opacity {
+    opacity: 0;
+}
+
+.flexnav.flexnav-show {
+    max-height: 2000px;
+    opacity: 1;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.flexnav.one-page {
+    position: fixed;
+    top: 50px;
+    right: 5%;
+    max-width: 200px;
+}
+
+.flexnav li {
+    font-size: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.flexnav li a {
+    position: relative;
+    display: block;
+    padding: .75em;
+    z-index: 200;
+    overflow: hidden;
+    color: #ffffff;
+    background: #005A9C;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.flexnav li a:hover {
+    background: #CE1126;
+}
+
+.flexnav li ul {
+    position: relative;
+    width: 100%;
+    z-index: 110;
+}
+
+.flexnav li ul li {
+    font-size: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.flexnav li ul.flexnav-show li {
+    overflow: visible;
+}
+
+.flexnav li ul li a {
+    display: block;
+    background: #0065AD;
+}
+
+.flexnav ul li ul li a {
+    background: #0071C2;
+}
+
+.flexnav ul li ul li ul li a {
+    background: #007DD6;
+}
+
+.flexnav .touch-button {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: #acaca1;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.flexnav .touch-button:hover {
+    cursor: pointer;
+}
+
+.flexnav .touch-button .navicon {
+    position: relative;
+    top: 1.4em;
+    font-size: 12px;
+    color: #c0Cccd;
+}
+
+.menu-button {
+    position: relative;
+    display: block;
+    padding: 1em;
+    background: #003F87;
+    color: #ffffff;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.menu-button.one-page {
+    position: fixed;
+    top: 0;
+    right: 5%;
+    padding-right: 45px;
+}
+
+.menu-button .touch-button {
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+.menu-button .touch-button .navicon {
+    font-size: 16px;
+    position: relative;
+    top: 1em;
+    color: #ccc;
+}
+
+@media all and (min-width: 767px) {
+    #main-navigation {
+        width: 100%;
+        background-color: #005A9C;
+        height: 40px;
+    }
+    #main-navigation nav {
+        font-size: 90%;
+        max-width: 990px;
+        width: 97%;
+        margin: 0 auto 0 auto;
+        position: relative;
+        z-index: 1000;
+    }
+    body.one-page {
+        padding-top: 70px;
+    }
+    .flexnav {
+        overflow: visible;
+    }
+    .flexnav.opacity {
+        opacity: 1;
+    }
+    .flexnav.one-page {
+        top: 0;
+        right: auto;
+        max-width: 1080px;
+    }
+    .flexnav li {
+        position: relative;
+        list-style: none;
+        float: left;
+        display: block;
+        background-color: #005A9C;
+        overflow: visible;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .flexnav > li {
+        max-width: 17%;
+    }
+    .flexnav li a {
+        border-left: 1px solid #0065AD;
+        border-bottom: none;
+        overflow: visible;
+        padding: .75em 0 .75em 0;
+    }
+    .flexnav > li:last-child > a,
+    .flexnav li li a {
+        border-right: 1px solid #0065AD;
+    }
+    .flexnav li li {
+        border-bottom: 1px solid #0065AD;
+    }
+    .flexnav li li:last-child {
+        border-bottom: 0;
+    }
+    .flexnav li > ul {
+        position: absolute;
+        top: auto;
+        left: 0;
+    }
+    .flexnav li > ul li {
+        width: 100%;
+    }
+    .flexnav li ul li > ul {
+        margin-left: 100%;
+        top: 0;
+    }
+    .flexnav li ul li a {
+        border-bottom: none;
+        border-right: 0;
+        border-left: 0;
+    }
+    .flexnav li ul.open {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        z-index: 110;
+    }
+    .flexnav li ul.open li {
+        overflow: visible;
+        max-height: 100px;
+    }
+    .flexnav li ul.open ul.open {
+        margin-left: 100%;
+        top: 0;
+    }
+    .menu-button {
+        display: none;
+    }
+    .flexnav .touch-button {
+        background: rgba(0, 0, 0, 0.00);
+        width: 30px;
+    }
+    .flexnav .touch-button .navicon {
+        top: 1em;
+    }
+}
+
+@media all and (max-width: 500px) {
+    img.alignleft,
+    img.alignright {
+        float: none;
+        clear: both;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        padding: 0;
+    }
+    .wp-caption.alignright,
+    figure.alignright,
+    .wp-caption.alignleft,
+    figure.alignleft {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        width: 100%
+    }
+    p.wp-caption-text,
+    figure {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 10px 0 10px 0;
+    }
+}
+
+
+/* Old IE styles */
+
+.oldie body.one-page {
+    padding-top: 70px;
+}
+
+.oldie .flexnav {
+    overflow: visible;
+}
+
+.oldie .flexnav.one-page {
+    top: 0;
+    right: auto;
+    max-width: 1080px;
+}
+
+.oldie .flexnav li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    background-color: #a6a6a2;
+    width: 20%;
+    min-height: 50px;
+    overflow: visible;
+}
+
+.oldie .flexnav li:hover > ul {
+    display: block;
+    width: 100%;
+    overflow: visible;
+}
+
+.oldie .flexnav li:hover > ul li {
+    width: 100%;
+    float: none;
+}
+
+.oldie .flexnav li a {
+    border-left: 1px solid #acaca1;
+    border-bottom: none;
+    overflow: visible;
+}
+
+.oldie .flexnav li > ul {
+    background: #acaca1;
+    position: absolute;
+    top: auto;
+    left: 0;
+    display: none;
+    z-index: 110;
+    overflow: visible;
+}
+
+.oldie .flexnav li ul li ul {
+    top: 0;
+}
+
+.oldie .flexnav li ul li a {
+    border-bottom: none;
+}
+
+.oldie .flexnav li ul.open {
+    display: block;
+    width: 100%;
+    overflow: visible;
+}
+
+.oldie .flexnav li ul.open li {
+    width: 100%;
+}
+
+.oldie .flexnav li ul.open ul.open {
+    margin-left: 100%;
+    top: 0;
+    display: block;
+    width: 100%;
+    overflow: visible;
+}
+
+.oldie .flexnav ul li:hover ul {
+    margin-left: 100%;
+    top: 0;
+}
+
+.oldie .menu-button {
+    display: none;
+}
+
+.oldie.ie7 .flexnav li {
+    width: 19.9%;
+}
+
+
+/* WordPress Pagination Links */
+
+div.nav-next,
+div.nav-previous {
+    width: 35%;
+    text-align: center;
+}
+
+div.nav-next {
+    float: right;
+}
+
+div.nav-previous {
+    float: left;
+}
+
+div.nav-next a,
+div.nav-previous a,
+div.nav-next a:visited,
+div.nav-previous a:visited {
+    color: #fff !important;
+    text-decoration: none !important;
+    display: block;
+    width: 100%;
+    background-color: #005A9C;
+    line-height: 160%;
+    padding: 5px;
+}
+
+div.nav-next a::after {
+    content: "\00a0\00bb ";
+}
+
+div.nav-previous a::before {
+    content: "\00ab\00a0";
+}
+
+div.nav-next a:hover,
+div.nav-previous a:hover {
+    background-color: #CE1126;
+    color: #fff;
+}
