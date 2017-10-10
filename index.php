@@ -219,7 +219,7 @@ label::before {
   </div>
 </nav>
 <div class="row" style="background-color:#e31837;">
-<img style="max-width:400px; width:100%; height:auto; display:block; margin:0 auto;" src="images/brand.png">
+	<h1>Project ALLAN</h1>
 </div>
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
